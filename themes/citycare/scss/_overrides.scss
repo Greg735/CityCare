@@ -1,0 +1,369 @@
+// @todo these should be their own CSS files and only included when
+// specific Drupal libraries are used.
+@import "component/alert";
+@import "component/ajax";
+@import "component/field";
+@import "component/file";
+@import "component/filter";
+@import "component/form";
+@import "component/icon";
+@import "component/navbar";
+@import "component/node";
+@import "component/panel";
+@import "component/progress-bar";
+@import "component/table-drag";
+@import "component/tabs";
+@import "component/toolbar";
+
+// jQuery UI style overrides.
+@import "jquery-ui/autocomplete";
+
+/*** COLORS ***/
+$gray: #6e6e6e;
+$skin: #f19780;
+
+
+
+ol, ul {
+  padding-left: 1.5em;
+  .popover &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// Page header.
+.page-header {
+  margin-top: 0;
+}
+
+// Footer.
+.footer {
+  margin-top: 45px;
+  padding-top: 35px;
+  padding-bottom: 36px;
+  border-top: 1px solid #E5E5E5;
+}
+
+// Paragraphs.
+p:last-child,
+.form-group:last-child,
+.panel:last-child {
+  margin-bottom: 0;
+}
+
+// Help region.
+.region-help {
+  > .glyphicon {
+    font-size: $font-size-large;
+    float: left;
+    margin: -0.05em 0.5em 0 0;
+  }
+  .block {
+    overflow: hidden;
+  }
+}
+
+ 
+.help-block, .control-group .help-inline {
+  color: $gray-light;
+  font-size: 12px;
+  margin: 5px 0 10px;
+  padding: 0;
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+/** DIVERS **/
+body{
+	font-size: 17px;
+	color: $gray;
+	font-family: Questrial;
+}
+
+a,a:hover{
+  color: $skin;
+  text-decoration: none;
+}
+h1, h2, h3{
+  color: $skin;
+  font-family: Questrial;
+}
+aside h2{
+  font-size: 23px;
+}
+.field--name-field-file{
+	margin: 10px 0;
+}
+.navbar.container.affix {
+	background-color: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index:10;
+}
+
+.nav-tabs > li > a,
+.views-field-edit-node a {
+    color: black;
+}
+
+/********************************************************/
+/************************** HEADER **********************/
+/********************************************************/
+a.navbar-brand{
+  display: none;
+}
+a.logo img{
+	width: 175px;
+}
+.region-header{
+  text-align: center;
+  img{
+    margin: 20px auto;
+  }
+}
+// navbar center
+.navbar .navbar-nav {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+  margin-top: 2px;
+}
+
+.navbar .navbar-collapse {
+  text-align: center;
+}
+
+.navbar {
+    position: relative;
+    min-height: 50px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px solid transparent;
+    border-bottom: 0;
+}
+
+.navbar-default {
+    background-color: transparent;
+    border-color: #e7e7e7;
+    border-radius: 0;
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+    color: #fff;
+    background-color: $skin;
+}
+.navbar-default .navbar-collapse, .navbar-default .navbar-form{
+	border-color: white;
+}
+
+@media (min-width: 768px) {
+  .navbar-nav > li > a {
+      padding-top: 12px;
+      padding-bottom: 12px;
+  }
+}
+
+.navbar.container {
+  width: 100%;
+  max-width: 100%;
+  padding:0;
+  /*&:after{
+      background: url(../images/header_bg.jpg);
+      border-bottom: 10px solid #008FBB;
+      height: 30px;
+      display: block;
+      margin: 30px 0;
+  }*/
+  .navbar-header {
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+
+/********************************************************/
+/*********************** PREFOOTER **********************/
+/********************************************************/
+.prefooter{
+	margin-top: 100px;
+	margin-bottom: 50px;
+	.col-md-6{
+		@media (max-width: 991px) {
+			margin-bottom: 10px;
+		}
+	}
+}
+
+/********************************************************/
+/*********************** Page basic *********************/
+/********************************************************/
+
+//Aside
+aside h1.page-header{
+	margin-top: 20px;
+}
+section.col-sm-8.col-sm-offset-1{
+	margin-top: 20px;
+	h2:first-of-type{
+		margin-top:0;
+	}
+}
+//Aside links
+.nav > li > a:hover, 
+.nav > li > a:focus {
+    color: #fff;
+    background-color: #008EC0;
+}
+
+.page-node-type-page{
+	.region-content{
+	  h1{
+	    display: none;
+	  }		
+	}
+}
+.path-frontpage{
+	.page-header{
+		display: none;
+	}
+}
+.page-header{
+  border-bottom: none;
+}
+
+
+/********************************************************/
+/*********************** Page home *********************/
+/********************************************************/
+.title{
+	h1{
+		//margin-top:0
+	}
+}
+.section{
+	padding-bottom: 4.5em;
+	padding-top: 6em;
+	.row{
+		padding-top: 40px;
+	}
+	.panel-image{
+		background-attachment: fixed;
+		height: 100vh;
+		max-height: 1200px;
+		background-repeat: no-repeat;
+		background-position: top center;
+	}
+}
+body.path-frontpage {
+  .navbar.container {
+    width: 100%;
+    max-width: 100%;
+    padding:0;
+    &:after{
+        display: none;
+    }
+  }
+  .main-container {
+    width: 100%;
+    section.col-sm-12 {
+      padding:0;
+    }
+  }
+}
+
+
+/********************************************************/
+/*********************** VIEWS *********************/
+/********************************************************/
+
+.view-news, .view-events{
+	.row{
+		margin-bottom: 20px;
+		h2{
+			margin-top:0;
+		}
+	}
+}
+.view-jobs-list{
+	.views-row{
+		margin-bottom: 0;
+	}
+}
+
+.view-partners-people, .view-researchers{
+	.views-view-grid .row{
+		position: relative;
+		clear: both;
+		margin-bottom: 30px;
+	}
+	.views-field-field-image{
+		float: left;
+	}
+	.views-field-field-title,
+	.views-field-body,
+	.views-field-title{
+		margin-left: 155px;
+	}
+	.views-field-field-title,
+	.views-field-title{
+		h2{
+			margin-top: 0;
+		}
+	}
+}
+.view-partners-logo{
+	.col{
+		@media (max-width: 991px) {
+			margin-bottom: 10px;
+		}
+	}
+}
+/* Admin */
+.views-field-edit-node{
+	text-transform: capitalize;
+	background: white;
+	position: absolute;
+	top:0;
+	left:0;
+	padding: 4px;
+}
+
+/********************************************************/
+/*********************** Page News *********************/
+/********************************************************/
+#block-views-block-news-block-1,
+#block-views-block-news-block-2 {
+  .views-row {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgb(231, 231, 231);
+    .views-field-title {
+      //text-transform: uppercase;
+      font-size: 18px;
+    }
+    .views-field-created {
+      font-size: 12px;
+    }
+  }
+}
+//bloc content uniquement
+#block-views-block-news-block-1 {
+  .views-field-title {
+    margin-bottom: 10px;
+  }
+  .views-field-field-image {
+    margin-bottom: 15px;
+  }
+  .views-field-body {
+    margin-bottom: 15px;
+    p {
+      margin-bottom: 5px;
+    }
+  }
+  .views-field-view-node a {
+    font-size: 12px;
+  }
+}

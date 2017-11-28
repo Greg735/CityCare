@@ -1,0 +1,17 @@
+#block-webmaster{
+	background-color: black;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    left: 0;
+    font-size: 12px;	
+    li{
+    	display: inline-block;
+    }
+    a{
+		color: white;
+	}
+}
+body.user-logged-in{
+	padding-top:37px;
+}

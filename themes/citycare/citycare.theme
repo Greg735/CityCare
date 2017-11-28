@@ -1,0 +1,16 @@
+<?php
+/**
+ * @file
+ * Bootstrap sub-theme.
+ *
+ * Place your custom PHP code in this file.
+ */
+/**
+ * Implements hook_preprocess_HOOK() for HTML document templates.
+ *
+ * Adds body classes if certain regions have content.
+ */
+function citycare_preprocess_html(&$variables) {
+		$variables['head_title']['title'] = str_replace("| Drupal", "", $variables['head_title']['title']);
+    $variables['head_title']['name'] = 'CityCare';
+  }
