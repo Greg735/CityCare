@@ -18,8 +18,8 @@ core/phpunit.xml
 ## Nodejs files
 
 node_modules
-choeur.sublime-project
-choeur.sublime-workspace
+*.sublime-project
+*.sublime-workspace
 sftp-config.json
 
 ## build folder
